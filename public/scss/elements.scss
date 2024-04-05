@@ -19,12 +19,14 @@ h2{
     border-radius: 5px;
     margin-top: 30px;
     font-weight: 700;
+    border: none;
     @media(max-width: 991px){
       margin-top: 15px;
     }
     &:hover{
       background: #5d3d0b;
       color: #ffffff;
+      cursor: pointer;
     }
     i{}
   }
