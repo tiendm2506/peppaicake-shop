@@ -8,7 +8,6 @@ import '../public/scss/fonts.scss'
 import '../public/scss/general.scss'
 import '../public/scss/elements.scss'
 import '../public/scss/animation.scss'
-// import '../public/scss/section.scss'
 
 import App from './../components/App'
 import { store } from './../store'
