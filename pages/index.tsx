@@ -173,7 +173,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id='testimonials'>
+        <section id={styles.testimonials}>
           <div className='container'>
             <h2>Phản hồi từ khách hàng</h2>
             <div className='row slider'>
