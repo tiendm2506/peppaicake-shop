@@ -9,7 +9,7 @@ const axiosClient = axios.create({
 })
 
 axiosClient.interceptors.request.use(
-  function (config: AxiosRequestConfig) {
+  function (config: any) {
     // Do something before request is sent
     const language = storageService.get(STORE_KEY.LANGUAGE)
     if(language) {
