@@ -1,6 +1,8 @@
+import styles from './header.module.scss'
+
 export default function Info() {
   return (
-    <div className='info'>
+    <div className={styles.info}>
       <ul>
         <li>
           <i className='fa fa-map-marker' aria-hidden='true' />

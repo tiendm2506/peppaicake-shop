@@ -12,12 +12,15 @@ import '../public/scss/animation.scss'
 
 import App from './../components/App'
 import { store } from './../store'
+import { MainLayout } from './../components/layout'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <Component {...pageProps} />
-      <App />
+      <MainLayout>
+        <Component {...pageProps} />
+        <App />
+      </MainLayout>
     </Provider>
   )
 }

@@ -1,12 +1,12 @@
-import './footer.scss'
+import styles from './footer.module.scss'
 
 export function Footer() {
   return (
-    <footer id='footer'>
+    <footer id={styles.footer}>
       <div className='container'>
         <div className='row'>
           <div className='col-lg-4'>
-            <div className='content home-col'>
+            <div className={`${styles.content} ${styles.homeCol}`}>
               <a href='/'>
                 <img src='../images/logo-white.svg' alt='' />
               </a>
@@ -47,7 +47,7 @@ export function Footer() {
             </div>
           </div>
           <div className='col-lg-4'>
-            <div className='content contact'>
+            <div className={`${styles.content} ${styles.contact}`}>
               <h3>Liên hệ</h3>
               <ul>
                 <li>
@@ -66,7 +66,7 @@ export function Footer() {
             </div>
           </div>
           <div className='col-lg-4'>
-            <div className='content recent-post'>
+            <div className={`${styles.content} ${styles.recentPost}`}>
               <h3>Bài đăng gần đây</h3>
               <ul>
                 <li>
@@ -86,7 +86,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className='copyright'>
+      <div className={styles.copyright}>
         <p>Copyright © 2021 Peppai Cake - Designed by Henry</p>
       </div>
     </footer>

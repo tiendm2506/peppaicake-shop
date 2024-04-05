@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import './header.scss'
+import styles from './header.module.scss'
 import { ROUTES } from './../../../constants'
 import Menu from './Menu'
 import Social from './Social'
@@ -8,39 +8,39 @@ import Info from './Info'
 
 export function Header() {
   return (
-    <header id='header'>
+    <header id={styles.header}>
       <div className='container-fluid'>
-        <div className='info-social d-none d-sm-flex'>
+        <div className={`d-none d-sm-flex ${styles.infoSocial}`}>
           <Info />
           <Social />
         </div>
-        <div className='logo-menu d-none d-sm-flex'>
-          <div className='logo'>
+        <div className={`${styles.logoMenu} d-none d-sm-flex`}>
+          <div className={styles.logo}>
             <a href='/'>
               <img src='../images/logo.svg' alt='' />
             </a>
           </div>
-          <div className='menu'>
+          <div className={styles.menu}>
             <Menu />
-            <Link className='cart' href={ROUTES.CART_PAGE}>
+            <Link className={styles.cart} href={ROUTES.CART_PAGE}>
               <i className='fa fa-shopping-basket' aria-hidden='true' />
               <span>3</span>
             </Link>
           </div>
         </div>
         {/*Menu mobile*/}
-        <div className='logo-menu d-sm-none'>
+        <div className={`${styles.logoMenu} d-sm-none`}>
           <div className='control__menu'>
             <span className='line line--first' />
             <span className='line line--second' />
             <span className='line line--third' />
           </div>
-          <div className='logo'>
+          <div className={styles.logo}>
             <a href='/'>
               <img src='/images/logo.svg' alt='' />
             </a>
           </div>
-          <a className='cart'>
+          <a className={styles.cart}>
             <i className='fa fa-shopping-basket' aria-hidden='true' />
             <span>3</span>
           </a>

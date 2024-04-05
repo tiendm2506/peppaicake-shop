@@ -1,6 +1,8 @@
+import styles from './header.module.scss'
+
 export default function Social() {
   return (
-    <div className='social'>
+    <div className={styles.social}>
       <ul>
         <li>
           <a href='#'>
