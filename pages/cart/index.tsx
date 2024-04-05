@@ -1,14 +1,11 @@
 import styles from './cart.module.scss'
-import sectionStyles from './../../styles/section.module.scss'
 import CartItem from './components/CartItem'
+import BannerPage from '@/components/common/banner-page'
 
 export default function Cart() {
   return (
     <main id={styles.cartPage}>
-      <section id={sectionStyles.bannerPage}>
-        <img className='img-fluid' src='/images/bg-banner-page.jpg' alt='' />
-        <h1>Your cart</h1>
-      </section>
+      <BannerPage titlePage='Your cart' />
       <section id={styles.cart}>
         <div className='container'>
           <div className={styles.wrapper}>

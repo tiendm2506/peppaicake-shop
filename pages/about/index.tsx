@@ -1,15 +1,12 @@
 import styles from './about.module.scss'
-import sectionStyles from './../../styles/section.module.scss'
+import BannerPage from '@/components/common/banner-page'
 
 export default function About() {
   // const router = useRouter()
 
   return (
     <main id={styles.aboutPage}>
-      <section id={sectionStyles.bannerPage}>
-        <img className='img-fluid' src='/images/bg-banner-page.jpg' alt='' />
-        <h1>Về chúng tôi</h1>
-      </section>
+      <BannerPage titlePage='về chúng tôi' />
       <section id={styles.aboutUs}>
         <div className='container'>
           <div className='row'>

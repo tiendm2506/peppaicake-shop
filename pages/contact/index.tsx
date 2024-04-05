@@ -1,18 +1,15 @@
 import styles from './contact.module.scss'
 import sectionStyles from './../../styles/section.module.scss'
 
+import BannerPage from '@/components/common/banner-page'
+
 // import { useTranslate } from '../hooks/useTranslate'
 
 export default function Contact() {
   // const translate = useTranslate().contactPage
   return (
     <main id={styles.contactPage}>
-      {/* <section id='banner-page'>
-        <img className='img-fluid' src='../images/bg-banner-page.jpg' alt='' />
-        <h1>
-          Liên hệ <span className='d-none d-sm-inline-block' />
-        </h1>
-      </section> */}
+      <BannerPage titlePage='Liên hệ' />
       <section id={styles.contact}>
         <div className='container'>
           <div className='row'>
