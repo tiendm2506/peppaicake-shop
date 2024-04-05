@@ -1,5 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
+
+import styles from './../styles/homepage.module.scss'
+
 export default function Home() {
   return (
     <>
@@ -9,7 +11,288 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main>qwqww</main>
+      <main id={styles.homepage}>
+        <section id={styles.banner}>
+          <img className='w-100 img-fluid img-banner' src='/images/banner-homepage.jpg' alt='' />
+          <div className={styles.content}>
+            <img
+              className={`img-fluid ${styles.logoBanner}`}
+              src='/images/logo-banner.png'
+              alt=''
+            />
+            <h1>Quality Product</h1>
+            <h4>
+              <img className={`img-fluid ${styles.iconLeft}`} src='/images/icon-left.png' alt='' />
+              From the best bakers
+              <img
+                className={`img-fluid ${styles.iconRight}`}
+                src='/images/icon-right.png'
+                alt=''
+              />
+            </h4>
+            <div className={styles.wrapper}>
+              <img className='img-fluid' src='/images/barley.png' alt='' />
+              <div>
+                <span className={styles.shopBtn}>Shop Now</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id={styles.whyChooseUs}>
+          <div className='container'>
+            <h2>Why choose us</h2>
+            <div className='row'>
+              <div className='col-lg-3 col-sm-6'>
+                <div className={styles.content}>
+                  <div className={styles.icon}>
+                    <i className='fa fa-check-square-o' aria-hidden='true' />
+                  </div>
+                  <div className={styles.name}>Nguyên liệu an toàn</div>
+                  <div className={styles.des}>Omnis iste natus error sit</div>
+                </div>
+              </div>
+              <div className='col-lg-3 col-sm-6'>
+                <div className={styles.content}>
+                  <div className={styles.icon}>
+                    <i className='fa fa-hand-spock-o' aria-hidden='true' />
+                  </div>
+                  <div className={styles.name}>100% homemade</div>
+                  <div className={styles.des}>Omnis iste natus error sit</div>
+                </div>
+              </div>
+              <div className='col-lg-3 col-sm-6'>
+                <div className={styles.content}>
+                  <div className={styles.icon}>
+                    <i className='fa fa-money' aria-hidden='true' />
+                  </div>
+                  <div className={styles.name}>Giá cả hợp lý</div>
+                  <div className={styles.des}>Omnis iste natus error sit</div>
+                </div>
+              </div>
+              <div className='col-lg-3 col-sm-6'>
+                <div className={styles.content}>
+                  <div className={styles.icon}>
+                    <i className='fa fa-cubes' aria-hidden='true' />
+                  </div>
+                  <div className={styles.name}>Đa dạng mẫu mã</div>
+                  <div className={styles.des}>Omnis iste natus error sit</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id={styles.products}>
+          <div className='container'>
+            <h2>Sản phẩm của chúng tôi</h2>
+            <div className='list-categories'>
+              <ul>
+                <li className='active'>All</li>
+                <li>Bread</li>
+                <li>Birthday Cake</li>
+                <li>Wedding Cake</li>
+              </ul>
+            </div>
+            <div className='row'>
+              <div className='col-lg-3 col-sm-6'>
+                <div className='wrapper-product'>
+                  <div className='img'>
+                    <img className='img-fluid' src='/images/product-01.jpg' alt='' />
+                  </div>
+                  <div className='content'>
+                    <div className='info'>
+                      <div className='name'>Bread stick</div>
+                      <div className='price'>$ 7.00</div>
+                    </div>
+                    <button className='add-to-cart-btn'>
+                      <img className='img-fluid' src='/images/icon-add-to-cart.png' alt='' />
+                      Thêm vào giỏ
+                    </button>
+                  </div>
+                  <a href='layouts/product-details.html' />
+                </div>
+              </div>
+              <div className='col-lg-3 col-sm-6'>
+                <div className='wrapper-product'>
+                  <div className='img'>
+                    <img className='img-fluid' src='/images/product-01.jpg' alt='' />
+                  </div>
+                  <div className='content'>
+                    <div className='info'>
+                      <div className='name'>Bread stick</div>
+                      <div className='price'>$ 7.00</div>
+                    </div>
+                    <button className='add-to-cart-btn'>
+                      <img className='img-fluid' src='/images/icon-add-to-cart.png' alt='' />
+                      Thêm vào giỏ
+                    </button>
+                  </div>
+                  <a href='layouts/product-details.html' />
+                </div>
+              </div>
+              <div className='col-lg-3 col-sm-6'>
+                <div className='wrapper-product'>
+                  <div className='img'>
+                    <img className='img-fluid' src='/images/product-01.jpg' alt='' />
+                  </div>
+                  <div className='content'>
+                    <div className='info'>
+                      <div className='name'>Bread stick</div>
+                      <div className='price'>$ 7.00</div>
+                    </div>
+                    <button className='add-to-cart-btn'>
+                      <img className='img-fluid' src='/images/icon-add-to-cart.png' alt='' />
+                      Thêm vào giỏ
+                    </button>
+                  </div>
+                  <a href='layouts/product-details.html' />
+                </div>
+              </div>
+              <div className='col-lg-3 col-sm-6'>
+                <div className='wrapper-product'>
+                  <div className='img'>
+                    <img className='img-fluid' src='/images/product-01.jpg' alt='' />
+                  </div>
+                  <div className='content'>
+                    <div className='info'>
+                      <div className='name'>Bread stick</div>
+                      <div className='price'>$ 7.00</div>
+                    </div>
+                    <button className='add-to-cart-btn'>
+                      <img className='img-fluid' src='/images/icon-add-to-cart.png' alt='' />
+                      Thêm vào giỏ
+                    </button>
+                  </div>
+                  <a href='layouts/product-details.html' />
+                </div>
+              </div>
+            </div>
+            <div className='text-center'>
+              <a href='#' className='see-more-btn'>
+                Xem thêm <i className='fa fa-long-arrow-right' aria-hidden='true' />
+              </a>
+            </div>
+          </div>
+        </section>
+        <section id='testimonials'>
+          <div className='container'>
+            <h2>Phản hồi từ khách hàng</h2>
+            <div className='row slider'>
+              <div className='col-lg-4 item'>
+                <div className='content'>
+                  <img className='img-fluid quote-icon' src='/images/quote.png' alt='' />
+                  <p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip commodo consequat duis aute irure.
+                  </p>
+                  <div className='rating'>
+                    <i className='fa fa-star' aria-hidden='true' />
+                    <i className='fa fa-star' aria-hidden='true' />
+                    <i className='fa fa-star' aria-hidden='true' />
+                    <i className='fa fa-star' aria-hidden='true' />
+                    <i className='fa fa-star' aria-hidden='true' />
+                  </div>
+                  <h3>Jason Williamson</h3>
+                  <h6>Founder at ThemeMu</h6>
+                  <img className='img-fluid avatar' src='/images/avatar.png' alt='' />
+                </div>
+              </div>
+              <div className='col-lg-4 item'>
+                <div className='content'>
+                  <img className='img-fluid quote-icon' src='/images/quote.png' alt='' />
+                  <p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip commodo consequat duis aute irure.
+                  </p>
+                  <div className='rating'>
+                    <i className='fa fa-star' aria-hidden='true' />
+                    <i className='fa fa-star' aria-hidden='true' />
+                    <i className='fa fa-star' aria-hidden='true' />
+                    <i className='fa fa-star' aria-hidden='true' />
+                    <i className='fa fa-star' aria-hidden='true' />
+                  </div>
+                  <h3>Jason Williamson</h3>
+                  <h6>Founder at ThemeMu</h6>
+                  <img className='img-fluid avatar' src='/images/avatar.png' alt='' />
+                </div>
+              </div>
+              <div className='col-lg-4 item'>
+                <div className='content'>
+                  <img className='img-fluid quote-icon' src='/images/quote.png' alt='' />
+                  <p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip commodo consequat duis aute irure.
+                  </p>
+                  <div className='rating'>
+                    <i className='fa fa-star' aria-hidden='true' />
+                    <i className='fa fa-star' aria-hidden='true' />
+                    <i className='fa fa-star' aria-hidden='true' />
+                    <i className='fa fa-star' aria-hidden='true' />
+                    <i className='fa fa-star' aria-hidden='true' />
+                  </div>
+                  <h3>Jason Williamson</h3>
+                  <h6>Founder at ThemeMu</h6>
+                  <img className='img-fluid avatar' src='/images/avatar.png' alt='' />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id='blog'>
+          <div className='container'>
+            <h2>From our blog</h2>
+            <div className='row'>
+              <div className='col-lg-4 col-sm-6'>
+                <div className='post-item'>
+                  <div className='thumb-post'>
+                    <img className='img-fluid' src='/images/product-01.jpg' alt='' />
+                    <div className='time'>Aug 18, 2021</div>
+                  </div>
+                  <h3>How to make cake: 9 steps (with pictures)</h3>
+                  <p>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis [...]
+                  </p>
+                  <a href='layouts/blog-details.html' className='see-more-btn'>
+                    Read More <i className='fa fa-long-arrow-right' aria-hidden='true' />
+                  </a>
+                </div>
+              </div>
+              <div className='col-lg-4 col-sm-6'>
+                <div className='post-item'>
+                  <div className='thumb-post'>
+                    <img className='img-fluid' src='/images/product-01.jpg' alt='' />
+                    <div className='time'>Aug 18, 2021</div>
+                  </div>
+                  <h3>How to make cake: 9 steps (with pictures)</h3>
+                  <p>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis [...]
+                  </p>
+                  <a href='layouts/blog-details.html' className='see-more-btn'>
+                    Read More <i className='fa fa-long-arrow-right' aria-hidden='true' />
+                  </a>
+                </div>
+              </div>
+              <div className='col-lg-4 col-sm-6'>
+                <div className='post-item'>
+                  <div className='thumb-post'>
+                    <img className='img-fluid' src='/images/product-01.jpg' alt='' />
+                    <div className='time'>Aug 18, 2021</div>
+                  </div>
+                  <h3>How to make cake: 9 steps (with pictures)</h3>
+                  <p>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis [...]
+                  </p>
+                  <a href='layouts/blog-details.html' className='see-more-btn'>
+                    Read More <i className='fa fa-long-arrow-right' aria-hidden='true' />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   )
 }
