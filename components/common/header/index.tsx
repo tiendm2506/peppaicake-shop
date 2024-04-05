@@ -16,9 +16,9 @@ export function Header() {
         </div>
         <div className={`${styles.logoMenu} d-none d-sm-flex`}>
           <div className={styles.logo}>
-            <a href='/'>
-              <img src='../images/logo.svg' alt='' />
-            </a>
+            <Link href={ROUTES.HOME_PAGE}>
+              <img src='/images/logo.svg' alt='' />
+            </Link>
           </div>
           <div className={styles.menu}>
             <Menu />
@@ -36,15 +36,15 @@ export function Header() {
             <span className='line line--third' />
           </div>
           <div className={styles.logo}>
-            <a href='/'>
+            <Link href={ROUTES.HOME_PAGE}>
               <img src='/images/logo.svg' alt='' />
-            </a>
+            </Link>
           </div>
-          <a className={styles.cart}>
+          <Link href={ROUTES.CART_PAGE} className={styles.cart}>
             <i className='fa fa-shopping-basket' aria-hidden='true' />
             <span>3</span>
-          </a>
-          <div className='menu-mobile'>
+          </Link>
+          <div className='menuMobile'>
             <Menu />
           </div>
         </div>

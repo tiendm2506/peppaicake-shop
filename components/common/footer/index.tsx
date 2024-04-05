@@ -1,3 +1,7 @@
+import Link from 'next/link'
+
+import { ROUTES } from './../../../constants'
+
 import styles from './footer.module.scss'
 
 export function Footer() {
@@ -7,41 +11,41 @@ export function Footer() {
         <div className='row'>
           <div className='col-lg-4'>
             <div className={`${styles.content} ${styles.homeCol}`}>
-              <a href='/'>
-                <img src='../images/logo-white.svg' alt='' />
-              </a>
+              <Link href={ROUTES.HOME_PAGE}>
+                <img src='/images/logo-white.svg' alt='' />
+              </Link>
               <p>
                 ThemeMu comes with powerful theme options, which empowers you to quickly and easily
                 build incredible store.
               </p>
               <ul>
                 <li>
-                  <a href='#' target='_blank'>
+                  <Link href='#'>
                     <span>
                       <i className='fa fa-facebook' aria-hidden='true' />
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href='#' target='_blank'>
+                  <Link href='#'>
                     <span>
                       <i className='fa fa-google-plus' aria-hidden='true' />
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href='#' target='_blank'>
+                  <Link href='#'>
                     <span>
                       <i className='fa fa-twitter' aria-hidden='true' />
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href='#' target='_blank'>
+                  <Link href='#'>
                     <span>
                       <i className='fa fa-youtube' aria-hidden='true' />
                     </span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -70,16 +74,16 @@ export function Footer() {
               <h3>Bài đăng gần đây</h3>
               <ul>
                 <li>
-                  <img className='img-fluid' src='../images/cake-post.jpg' alt='' />
+                  <img className='img-fluid' src='/images/cake-post.jpg' alt='' />
                   <h4>Etiam accumsan consequat libero et tincidunt</h4>
                   <h6>Aug 18, 2021</h6>
-                  <a href='#' />
+                  <Link href='#'></Link>
                 </li>
                 <li>
-                  <img className='img-fluid' src='../images/cake-post.jpg' alt='' />
+                  <img className='img-fluid' src='/images/cake-post.jpg' alt='' />
                   <h4>Etiam accumsan consequat libero et tincidunt</h4>
                   <h6>Aug 18, 2021</h6>
-                  <a href='#' />
+                  <Link href='#'></Link>
                 </li>
               </ul>
             </div>
