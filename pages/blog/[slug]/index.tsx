@@ -1,4 +1,4 @@
-import './blog-detail.scss'
+import styles from './blog-detail.module.scss'
 
 export default function BlogDetail() {
   return (

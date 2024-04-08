@@ -1,0 +1,36 @@
+.search{
+    @media(max-width: 767px){
+      margin-top: 50px;
+    }
+    .wrapper{
+      position: relative;
+      border: 1px solid #5d3d0b;
+      border-radius: 50px;
+      overflow: hidden;
+      input{
+        width: calc(100% - 60px);
+        border: none;
+      }
+      .btn_search{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 100%;
+        background: #c8aa7b;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all .5s ease;
+        &:hover{
+          background: #5d3d0b;
+        }
+        i{
+          font-size: 18px;
+          color: #ffffff;
+          transition: all .5s ease;
+        }
+      }
+    }
+  }

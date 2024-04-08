@@ -1,4 +1,4 @@
-import styles from './blog.module.scss'
+import styles from './styles.module.scss'
 import PostItem from '../common/post-item'
 
 export default function BlogSection() {
