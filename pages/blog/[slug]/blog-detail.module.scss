@@ -1,4 +1,4 @@
-#blog-details-page{
+#blog_details_page{
     h2{
       text-align: left;
       font-size: 30px;
@@ -15,11 +15,13 @@
         font-family: 'PlayfairDisplay',sans-serif;
         margin-top: 25px;
       }
-      .info-post{
+      .info_post{
         margin: 30px 0;
         ul{
           display: flex;
           li{
+            display: flex;
+            align-items: center;
             margin-right: 15px;
             padding-right: 15px;
             border-right: 1px solid #b3b3b3;
@@ -29,6 +31,7 @@
             i{
               color: #c8aa7b;
               font-size: 18px;
+              margin-right: 5px;
             }
             span{
               color: #b3b3b3;
@@ -53,7 +56,29 @@
         }
       }
     }
-    #comment-post{
+    .tags_post{
+      span{
+        margin-right: 10px;
+      }
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          margin-right: 10px;
+          margin-bottom: 10px;
+          a{
+            padding: 10px 20px;
+            background:  #c8aa7b;
+            border-radius: 50px;
+            color: white;
+            &:hover{
+              background:#5e5a54;
+            }
+          }
+        }
+      }
+    }
+    #comment_post{
       ul{
         li{
           position: relative;
@@ -94,7 +119,7 @@
         }
       }
     }
-    #leave-comment{
+    #leave_comment{
       margin-top: 30px;
       padding-bottom: 100px;
       @media(max-width: 767px){
