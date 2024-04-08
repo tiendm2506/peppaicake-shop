@@ -1,5 +1,7 @@
 // import './blog.scss'
 
+import Pagination from '@/components/common/pagination'
+
 export default function Blog() {
   return (
     <main id='blog-page'>
@@ -109,37 +111,7 @@ export default function Blog() {
                   </div>
                 </div>
               </div>
-              <div className='pagination'>
-                <ul>
-                  <li className='prev'>
-                    <a href='#'>
-                      <i className='fa fa-chevron-left' aria-hidden='true' />
-                      <i className='fa fa-chevron-left' aria-hidden='true' />
-                    </a>
-                  </li>
-                  <li className='active'>
-                    <a href='#'>1</a>
-                  </li>
-                  <li>
-                    <a href='#'>2</a>
-                  </li>
-                  <li>
-                    <a href='#'>3</a>
-                  </li>
-                  <li>
-                    <a href='#'>4</a>
-                  </li>
-                  <li>
-                    <a href='#'>5</a>
-                  </li>
-                  <li className='prev'>
-                    <a href='#'>
-                      <i className='fa fa-chevron-right' aria-hidden='true' />
-                      <i className='fa fa-chevron-right' aria-hidden='true' />
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              <Pagination />
             </div>
             <div className='col-lg-3 col-sm-5'>
               <div className='search'>

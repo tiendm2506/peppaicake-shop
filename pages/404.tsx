@@ -1,4 +1,7 @@
+import Link from 'next/link'
+
 import styles from './../styles/404.module.scss'
+import { ROUTES } from '@/constants'
 
 export default function Custom404() {
   return (
@@ -9,7 +12,7 @@ export default function Custom404() {
           <h2>Oops ! Something missing</h2>
           <h4>
             This page is missing or you assembled the link incorrectly
-            <a href='/'>Back to home page</a>
+            <Link href={ROUTES.HOME_PAGE}>Back to home page</Link>
           </h4>
           <img className={styles.imgNotFound} src='/images/img-404.jpg' alt='' />
         </div>
