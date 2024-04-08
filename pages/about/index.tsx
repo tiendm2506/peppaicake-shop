@@ -1,5 +1,5 @@
 import styles from './about.module.scss'
-import BannerPage from '@/components/common/banner-page'
+import BannerPage from '@/pages/components/common/banner-page'
 
 export default function About() {
   // const router = useRouter()

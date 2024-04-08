@@ -2,7 +2,7 @@ import styles from './product.module.scss'
 import sectionStyles from './../../styles/section.module.scss'
 
 import ProductItem from './components/ProductItem'
-import BannerPage from '@/components/common/banner-page'
+import BannerPage from '@/pages/components/common/banner-page'
 import Pagination from '@/components/common/pagination'
 
 export default function Product() {

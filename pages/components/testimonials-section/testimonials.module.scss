@@ -1,0 +1,9 @@
+#testimonials{
+    padding: 70px 0;
+    h2{
+      margin-bottom: 60px;
+      @media(max-width: 991px){
+        margin-bottom: 20px;
+      }
+    }
+  }

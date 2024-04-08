@@ -1,6 +1,6 @@
 import styles from './cart.module.scss'
 import CartItem from './components/CartItem'
-import BannerPage from '@/components/common/banner-page'
+import BannerPage from '@/pages/components/common/banner-page'
 
 export default function Cart() {
   return (

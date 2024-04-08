@@ -1,4 +1,4 @@
-import './blog.scss'
+// import './blog.scss'
 
 export default function Blog() {
   return (

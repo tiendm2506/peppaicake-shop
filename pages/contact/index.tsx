@@ -1,7 +1,7 @@
 import styles from './contact.module.scss'
 import sectionStyles from './../../styles/section.module.scss'
 
-import BannerPage from '@/components/common/banner-page'
+import BannerPage from '@/pages/components/common/banner-page'
 
 // import { useTranslate } from '../hooks/useTranslate'
 
