@@ -1,15 +1,15 @@
-#productPage{
+#product_page{
     #products{
       padding: 70px 0;
-      .wrapperProduct{
+      .wrapper_product{
         margin-bottom: 30px;
       }
-      &.listStyle{
+      &.list_style{
         .col-lg-3{
           flex: 0 0 100%;
           max-width: 100%;
         }
-        .wrapperProduct{
+        .wrapper_product{
           display: flex;
           flex-wrap: wrap;
           text-align: left;
@@ -47,7 +47,7 @@
           }
         }
       }
-      .searchShowing{
+      .search_showing{
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
@@ -56,7 +56,7 @@
         }
         .showing{
           display: flex;
-          .showStyle{
+          .show_style{
             cursor: pointer;
             background: white;
             transition: all .5s ease;

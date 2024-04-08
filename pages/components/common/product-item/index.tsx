@@ -1,4 +1,7 @@
+import Link from 'next/link'
+
 import styles from './styles.module.scss'
+import { ROUTES } from '@/constants'
 
 export default function ProductItem() {
   return (
@@ -16,7 +19,7 @@ export default function ProductItem() {
           Thêm vào giỏ
         </button>
       </div>
-      <a href='layouts/product-details.html' />
+      <Link href={ROUTES.PRODUCT_DETAILS}></Link>
     </div>
   )
 }
