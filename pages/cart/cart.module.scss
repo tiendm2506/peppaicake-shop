@@ -27,6 +27,10 @@
               @media(max-width: 991px){
                 font-size: 16px;
               }
+              > div{
+                display: flex;
+                align-items: center;
+              }
             }
             .productName{
               width: 55%;
@@ -90,6 +94,7 @@
                   background: #C8AA7B;
                   color: #ffffff;
                   cursor: pointer;
+                  user-select: none;
                 }
                 .upAmount{
                   border-left: 1px solid #C8AA7B;
@@ -118,7 +123,6 @@
           text-align: right;
           padding: 20px 0;
           color: #C8AA7B;
-          margin-bottom: -30px;
           @media(max-width: 991px){
             font-size: 18px;
           }
