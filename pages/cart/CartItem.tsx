@@ -13,29 +13,29 @@ interface CartItemProps {
 
 export default function CartItem(props: CartItemProps) {
   const { cart, callBack, index } = props
-  const [amount, setAmount] = useState(cart ? cart.quantity : 0)
-  // callBack(index, amount)
+  const [amount, setAmount] = useState(cart?.quantity)
+  callBack(index, amount)
   const handleIncrease = () => {
     setAmount((prev) => {
       return prev + 1
     })
-    callBack(index, amount)
+    // callBack(index, amount)
   }
   const handleDecrease = () => {
     setAmount((prev) => {
       if (prev === 0) return 0
       return prev - 1
     })
-    callBack(index, amount)
+    // callBack(index, amount)
   }
   return (
     <li className={styles.item}>
       <div className={styles.productName}>
-        <img className='img-fluid' src={cart.img} alt={cart.name} />
-        <span>{cart.name}</span>
-        <Link href={cart.slug}></Link>
+        <img className='img-fluid' src={cart?.img} alt={cart?.name} />
+        <span>{cart?.name}</span>
+        <Link href={cart?.slug}></Link>
       </div>
-      <div className={styles.productPrice}>{cart.price}$</div>
+      <div className={styles.productPrice}>{cart?.price}$</div>
       <div className={styles.productQuantity}>
         <div className={styles.wrapper}>
           <div className={styles.downAmount} onClick={handleDecrease}>
@@ -47,7 +47,7 @@ export default function CartItem(props: CartItemProps) {
           </div>
         </div>
       </div>
-      <div className={styles.productTotal}>{cart.price * amount}$</div>
+      <div className={styles.productTotal}>{cart?.price * amount}$</div>
     </li>
   )
 }
