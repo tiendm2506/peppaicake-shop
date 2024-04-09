@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 
 import styles from './cart.module.scss'
-// import CartItem from './CartItem'
+import CartItem from './CartItem'
 import BannerPage from '@/pages/components/common/banner-page'
 import TitleCart from './TitleCart'
 
@@ -19,14 +19,14 @@ export default function Cart() {
     })
     return total
   })
-  // const callBack = (index: number, amount: number) => {
-  //   listCarts[index].quantity = amount
-  //   let total = 0
-  //   listCarts.map((cart) => {
-  //     total += cart.price * cart.quantity
-  //   })
-  //   setTotal(total)
-  // }
+  const callBack = (index: number, amount: number) => {
+    listCarts[index].quantity = amount
+    let total = 0
+    listCarts.map((cart) => {
+      total += cart.price * cart.quantity
+    })
+    setTotal(total)
+  }
 
   return (
     <>
@@ -40,11 +40,11 @@ export default function Cart() {
             <div className={styles.wrapper}>
               <ul>
                 <TitleCart />
-                {/* {listCarts.map((cart, index) => (
-                  <CartItem key={index} cart={cart} index={index} />
-                ))} */}
+                {listCarts.map((cart, index) => (
+                  <CartItem key={index} cart={cart} index={index} callBack={callBack} />
+                ))}
               </ul>
-              <div className={styles.totalPrice}>Total1: {total}$</div>
+              <div className={styles.totalPrice}>Total: {total}$</div>
               <div className='text-end'>
                 <button className='general-btn'>Checkout</button>
               </div>
