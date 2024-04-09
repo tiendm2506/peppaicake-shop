@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 
 import styles from './cart.module.scss'
-import CartItem from './CartItem'
+// import CartItem from './CartItem'
 import BannerPage from '@/pages/components/common/banner-page'
 import TitleCart from './TitleCart'
 
