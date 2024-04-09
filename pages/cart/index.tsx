@@ -19,14 +19,14 @@ export default function Cart() {
     })
     return total
   })
-  const callBack = (index: number, amount: number) => {
-    listCarts[index].quantity = amount
-    let total = 0
-    listCarts.map((cart) => {
-      total += cart.price * cart.quantity
-    })
-    // setTotal(total)
-  }
+  // const callBack = (index: number, amount: number) => {
+  //   listCarts[index].quantity = amount
+  //   let total = 0
+  //   listCarts.map((cart) => {
+  //     total += cart.price * cart.quantity
+  //   })
+  //   setTotal(total)
+  // }
 
   return (
     <>
@@ -41,7 +41,7 @@ export default function Cart() {
               <ul>
                 <TitleCart />
                 {listCarts.map((cart, index) => (
-                  <CartItem key={index} cart={cart} index={index} callBack={callBack} />
+                  <CartItem key={index} cart={cart} index={index} />
                 ))}
               </ul>
               <div className={styles.totalPrice}>Total: {total}$</div>
