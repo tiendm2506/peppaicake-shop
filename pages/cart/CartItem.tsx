@@ -19,14 +19,12 @@ export default function CartItem(props: CartItemProps) {
     setAmount((prev) => {
       return prev + 1
     })
-    // callBack(index, amount)
   }
   const handleDecrease = () => {
     setAmount((prev) => {
       if (prev === 0) return 0
       return prev - 1
     })
-    // callBack(index, amount)
   }
   return (
     <li className={styles.item}>
@@ -38,11 +36,11 @@ export default function CartItem(props: CartItemProps) {
       <div className={styles.productPrice}>{cart?.price}$</div>
       <div className={styles.productQuantity}>
         <div className={styles.wrapper}>
-          <div className={styles.downAmount} onClick={handleDecrease}>
+          <div className={styles.downAmount} onClick={() => handleDecrease()}>
             -
           </div>
           <div className={styles.amount}>{amount}</div>
-          <div className={styles.upAmount} onClick={handleIncrease}>
+          <div className={styles.upAmount} onClick={() => handleIncrease()}>
             +
           </div>
         </div>
