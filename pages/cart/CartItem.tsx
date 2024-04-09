@@ -13,20 +13,18 @@ interface CartItemProps {
 
 export default function CartItem(props: CartItemProps) {
   const { cart, callBack, index } = props
-  const [amount, setAmount] = useState(cart.quantity)
-  // callBack(index, amount)
+  const [amount, setAmount] = useState(cart ? cart.quantity : 0)
+  callBack(index, amount)
   const handleIncrease = () => {
     setAmount((prev) => {
       return prev + 1
     })
-    callBack(index, amount)
   }
   const handleDecrease = () => {
     setAmount((prev) => {
       if (prev === 0) return 0
       return prev - 1
     })
-    callBack(index, amount)
   }
   return (
     <li className={styles.item}>
