@@ -7,12 +7,18 @@ import BannerPage from '@/pages/components/common/banner-page'
 import TitleCart from './TitleCart'
 
 export default function Cart() {
-  const [total, setTotal] = useState(0)
   const listCarts = [
-    { name: 'Cinnamon coffee cake 1', price: 9.5, quantity: 3, slug: '#', img: '#' },
-    { name: 'Cinnamon coffee cake 2', price: 12, quantity: 10, slug: '#', img: '#' },
-    { name: 'Cinnamon coffee cake 3', price: 7, quantity: 3, slug: '#', img: '#' },
+    { name: 'Cinnamon coffee cake 1', price: 9.5, quantity: 3, slug: '#', img: '/images/img-cake-about.jpg' },
+    { name: 'Cinnamon coffee cake 2', price: 12, quantity: 10, slug: '#', img: '/images/img-cake-about.jpg' },
+    { name: 'Cinnamon coffee cake 3', price: 7, quantity: 3, slug: '#', img: '/images/img-cake-about.jpg' },
   ]
+  const [total, setTotal] = useState(() => {
+    let total = 0
+    listCarts.map((cart) => {
+      total += cart.price * cart.quantity
+    })
+    return total
+  })
   const callBack = (index: number, amount: number) => {
     listCarts[index].quantity = amount
     let total = 0
@@ -21,6 +27,7 @@ export default function Cart() {
     })
     setTotal(total)
   }
+
   return (
     <>
       <Head>

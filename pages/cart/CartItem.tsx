@@ -14,22 +14,24 @@ interface CartItemProps {
 export default function CartItem(props: CartItemProps) {
   const { cart, callBack, index } = props
   const [amount, setAmount] = useState(cart.quantity)
-  callBack(index, amount)
+  // callBack(index, amount)
   const handleIncrease = () => {
     setAmount((prev) => {
       return prev + 1
     })
+    callBack(index, amount)
   }
   const handleDecrease = () => {
     setAmount((prev) => {
       if (prev === 0) return 0
       return prev - 1
     })
+    callBack(index, amount)
   }
   return (
     <li className={styles.item}>
       <div className={styles.productName}>
-        <img className='img-fluid' src='/images/img-cake-about.jpg' alt={cart.name} />
+        <img className='img-fluid' src={cart.img} alt={cart.name} />
         <span>{cart.name}</span>
         <Link href={cart.slug}></Link>
       </div>
