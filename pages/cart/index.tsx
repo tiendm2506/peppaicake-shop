@@ -44,7 +44,7 @@ export default function Cart() {
                   <CartItem key={index} cart={cart} index={index} />
                 ))} */}
               </ul>
-              <div className={styles.totalPrice}>Total: {total}$</div>
+              <div className={styles.totalPrice}>Total1: {total}$</div>
               <div className='text-end'>
                 <button className='general-btn'>Checkout</button>
               </div>
