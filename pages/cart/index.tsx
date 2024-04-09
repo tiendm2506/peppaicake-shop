@@ -40,9 +40,9 @@ export default function Cart() {
             <div className={styles.wrapper}>
               <ul>
                 <TitleCart />
-                {listCarts.map((cart, index) => (
+                {/* {listCarts.map((cart, index) => (
                   <CartItem key={index} cart={cart} index={index} />
-                ))}
+                ))} */}
               </ul>
               <div className={styles.totalPrice}>Total: {total}$</div>
               <div className='text-end'>
