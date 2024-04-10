@@ -1,6 +1,7 @@
 import styles from './styles.module.scss'
 
-export default function BannerSection() {
+export default function BannerSection(props) {
+  const { scrollToForm } = props
   return (
     <section id={styles.banner}>
       <img className='w-100 img-fluid img-banner' src='/images/banner-homepage.jpg' alt='' />
@@ -15,7 +16,9 @@ export default function BannerSection() {
         <div className={styles.wrapper}>
           <img className='img-fluid' src='/images/barley.png' alt='' />
           <div>
-            <span className={styles.shop_btn}>Shop Now</span>
+            <span className={styles.shop_btn} onClick={scrollToForm}>
+              Shop Now
+            </span>
           </div>
         </div>
       </div>

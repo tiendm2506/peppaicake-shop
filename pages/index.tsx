@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useRef } from 'react'
 
 import Banner from './components/banner-section'
 import WhyChooseUs from './components/why-choose-us-section'
@@ -9,6 +10,8 @@ import Blog from './components/blog-section'
 import styles from './../styles/homepage.module.scss'
 
 export default function Home() {
+  const formRef = useRef<null | HTMLDivElement>(null)
+  const scrollToForm = () => formRef.current?.scrollIntoView({ behavior: 'smooth' })
   return (
     <>
       <Head>
@@ -18,7 +21,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main id={styles.homepage}>
-        <Banner />
+        <Banner scrollToForm={scrollToForm} />
         <WhyChooseUs />
         <ProductSection />
         <Testimonials />

@@ -1,11 +1,14 @@
 import styles from './styles.module.scss'
 import Link from 'next/link'
+import { useRef } from 'react'
 
 import ProductItem from '../common/product-item'
 import { ROUTES } from '@/constants'
 import CategoryList from '../common/category-list'
 
 export default function ProductSection() {
+  const formRef = useRef<null | HTMLDivElement>(null)
+  const scrollToForm = () => formRef.current?.scrollIntoView({ behavior: 'smooth' })
   const listProducts = [
     { name: 'Bread stick 1', price: 15, desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ', thumb: '/images/product-01.jpg' },
     { name: 'Bread stick 2', price: 5, desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ', thumb: '/images/product-01.jpg' },
@@ -17,7 +20,7 @@ export default function ProductSection() {
     { name: 'Bread stick 8', price: 50, desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ', thumb: '/images/product-01.jpg' },
   ]
   return (
-    <section id={styles.products}>
+    <section id={styles.products} ref={formRef}>
       <div className='container'>
         <h2>Sản phẩm của chúng tôi</h2>
         <CategoryList />
