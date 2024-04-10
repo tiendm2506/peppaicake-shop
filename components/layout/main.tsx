@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import { Header, Footer } from './../common'
 // import { LayoutProps } from 'models/common'
 // import { Image } from 'components/common'
@@ -13,6 +15,10 @@ export function MainLayout(props: any) {
 
   return (
     <>
+      <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <Header />
       {children}
       <Footer />
