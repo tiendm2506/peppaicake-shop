@@ -25,7 +25,7 @@ export default function Cart() {
     listCarts.map((cart) => {
       total += cart.price * cart.quantity
     })
-    // setTotal(total)
+    setTotal(total)
   }
 
   return (
