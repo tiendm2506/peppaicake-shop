@@ -7,22 +7,20 @@ import styles from './cart.module.scss'
 
 interface CartItemProps {
   cart: CartProps
-  // callBack: (index: number, amount: number) => void
+  callBack: (index: number, amount: number) => void
   index: number
 }
 
 export default function CartItem(props: CartItemProps) {
-  const { cart, index } = props
+  const { cart, index, callBack } = props
   const [amount, setAmount] = useState(cart?.quantity)
-  // callBack(index, amount)
-  function handleIncrease() {
-    console.log('handleIncrease')
+  callBack(index, amount)
+  const handleIncrease = () => {
     setAmount((prev) => {
       return prev + 1
     })
   }
-  function handleDecrease() {
-    console.log('handleDecrease')
+  const handleDecrease = () => {
     setAmount((prev) => {
       if (prev === 0) return 0
       return prev - 1
@@ -38,11 +36,11 @@ export default function CartItem(props: CartItemProps) {
       <div className={styles.productPrice}>{cart?.price}$</div>
       <div className={styles.productQuantity}>
         <div className={styles.wrapper}>
-          <div className={styles.downAmount} onClick={() => handleDecrease()}>
+          <div className={styles.downAmount} onClick={handleDecrease}>
             -
           </div>
           <div className={styles.amount}>{amount}</div>
-          <div className={styles.upAmount} onClick={() => handleIncrease()}>
+          <div className={styles.upAmount} onClick={handleIncrease}>
             +
           </div>
         </div>

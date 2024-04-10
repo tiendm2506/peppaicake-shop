@@ -41,7 +41,7 @@ export default function Cart() {
               <ul>
                 <TitleCart />
                 {listCarts.map((cart, index) => (
-                  <CartItem key={index} cart={cart} index={index} />
+                  <CartItem key={index} cart={cart} index={index} callBack={callBack} />
                 ))}
               </ul>
               <div className={styles.totalPrice}>Total: {total}$</div>
