@@ -7,12 +7,12 @@ import styles from './cart.module.scss'
 
 interface CartItemProps {
   cart: CartProps
-  callBack: (index: number, amount: number) => void
+  // callBack: (index: number, amount: number) => void
   index: number
 }
 
 export default function CartItem(props: CartItemProps) {
-  const { cart, callBack, index } = props
+  const { cart, index } = props
   const [amount, setAmount] = useState(cart?.quantity)
   // callBack(index, amount)
   const handleIncrease = () => {
