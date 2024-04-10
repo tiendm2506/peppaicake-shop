@@ -33,7 +33,7 @@ export default function CartItem(props: CartItemProps) {
       <div className={styles.productName}>
         <img className='img-fluid' src={cart?.img} alt={cart?.name} />
         <span>{cart?.name}</span>
-        {/* <Link href={cart?.slug}></Link> */}
+        <Link href={cart?.slug}>test link</Link>
       </div>
       <div className={styles.productPrice}>{cart?.price}$</div>
       <div className={styles.productQuantity}>
