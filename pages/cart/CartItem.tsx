@@ -7,28 +7,30 @@ import styles from './cart.module.scss'
 
 interface CartItemProps {
   cart: CartProps
-  // callBack: (index: number, amount: number) => void
+  callBack: (index: number, amount: number) => void
   index: number
 }
 
 export default function CartItem(props: CartItemProps) {
-  // const { cart, callBack, index } = props
-  // const [amount, setAmount] = useState(cart?.quantity)
-  // callBack(index, amount)
-  // const handleIncrease = () => {
-  //   setAmount((prev) => {
-  //     return prev + 1
-  //   })
-  // }
-  // const handleDecrease = () => {
-  //   setAmount((prev) => {
-  //     if (prev === 0) return 0
-  //     return prev - 1
-  //   })
-  // }
+  const { cart, callBack, index } = props
+  const [amount, setAmount] = useState(cart?.quantity)
+  callBack(index, amount)
+  const handleIncrease = () => {
+    console.log('handleIncrease')
+    // setAmount((prev) => {
+    //   return prev + 1
+    // })
+  }
+  const handleDecrease = () => {
+    console.log('handleDecrease')
+    // setAmount((prev) => {
+    //   if (prev === 0) return 0
+    //   return prev - 1
+    // })
+  }
   return (
     <li className={styles.item}>
-      {/* <div className={styles.productName}>
+      <div className={styles.productName}>
         <img className='img-fluid' src={cart?.img} alt={cart?.name} />
         <span>{cart?.name}</span>
         <Link href={cart?.slug}></Link>
@@ -45,8 +47,7 @@ export default function CartItem(props: CartItemProps) {
           </div>
         </div>
       </div>
-      <div className={styles.productTotal}>{cart?.price * amount}$</div> */}
-      11111
+      <div className={styles.productTotal}>{cart?.price * amount}$</div>
     </li>
   )
 }

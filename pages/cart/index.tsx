@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 
 import styles from './cart.module.scss'
-// import CartItem from './CartItem'
+import CartItem from './CartItem'
 import BannerPage from '@/pages/components/common/banner-page'
 import TitleCart from './TitleCart'
 
@@ -25,7 +25,7 @@ export default function Cart() {
     listCarts.map((cart) => {
       total += cart.price * cart.quantity
     })
-    setTotal(total)
+    // setTotal(total)
   }
 
   return (
@@ -35,7 +35,7 @@ export default function Cart() {
       </Head>
       <main id={styles.cartPage}>
         <BannerPage titlePage='Your cart' />
-        {/* <section id={styles.cart}>
+        <section id={styles.cart}>
           <div className='container'>
             <div className={styles.wrapper}>
               <ul>
@@ -50,7 +50,7 @@ export default function Cart() {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
       </main>
     </>
   )
