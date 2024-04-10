@@ -1,11 +1,13 @@
 import { combineReducers, configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 import { useDispatch, TypedUseSelectorHook, useSelector } from 'react-redux'
 
-// import appReducer from './appSlice'
+import appReducer from './appSlice'
 import loaderReducer from './loaderSlice'
+import cartReducer from './cartSlice'
 
 const rootReducer = combineReducers({
-//   app: appReducer,
+  app: appReducer,
+  carts: cartReducer,
   loader: loaderReducer
 })
 

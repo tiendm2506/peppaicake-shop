@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useEffect, useCallback, useState } from 'react'
 
 import styles from './header.module.scss'
 import { ROUTES } from './../../../constants'
@@ -7,8 +8,23 @@ import Social from './Social'
 import Info from './Info'
 
 export function Header() {
+  const [scrollY, setScrollY] = useState(0)
+  const onScroll = useCallback(() => {
+    // const { pageYOffset, scrollY } = window
+    // console.log('yOffset', pageYOffset, 'scrollY', scrollY)
+    setScrollY(window.pageYOffset)
+  }, [])
+
+  useEffect(() => {
+    //add eventlistener to window
+    window.addEventListener('scroll', onScroll, { passive: true })
+    // remove event on unmount to prevent a memory leak with the cleanup
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+    }
+  }, [])
   return (
-    <header id={styles.header}>
+    <header id={styles.header} className={`${scrollY > 100 ? styles.scrolled : ''}`}>
       <div className='container-fluid'>
         <div className={`d-none d-sm-flex ${styles.infoSocial}`}>
           <Info />

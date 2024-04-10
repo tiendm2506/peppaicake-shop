@@ -8,7 +8,6 @@ import styles from './header.module.scss'
 export default function Menu() {
   const router = useRouter()
   const { pathname } = router
-  console.log('pathname: ', pathname)
   return (
     <ul>
       <li>

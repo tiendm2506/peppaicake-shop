@@ -12,6 +12,7 @@ import '../public/scss/animation.scss'
 import App from './../components/App'
 import { store } from './../store'
 import { MainLayout } from './../components/layout'
+import { addAbortListener } from 'events'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
