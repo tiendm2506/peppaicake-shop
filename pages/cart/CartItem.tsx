@@ -16,15 +16,17 @@ export default function CartItem(props: CartItemProps) {
   const [amount, setAmount] = useState(cart?.quantity)
   callBack(index, amount)
   const handleIncrease = () => {
-    setAmount((prev) => {
-      return prev + 1
-    })
+    console.log('handleIncrease')
+    // setAmount((prev) => {
+    //   return prev + 1
+    // })
   }
   const handleDecrease = () => {
-    setAmount((prev) => {
-      if (prev === 0) return 0
-      return prev - 1
-    })
+    console.log('handleDecrease')
+    // setAmount((prev) => {
+    //   if (prev === 0) return 0
+    //   return prev - 1
+    // })
   }
   return (
     <li className={styles.item}>
