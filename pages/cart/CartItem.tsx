@@ -17,15 +17,13 @@ export default function CartItem(props: CartItemProps) {
   if (!callBack) return
   callBack(index, amount)
   const handleIncrease = () => {
-    console.log('handleIncrease')
     setAmount((prev) => {
       return prev + 1
     })
   }
   const handleDecrease = () => {
-    console.log('handleDecrease')
     setAmount((prev) => {
-      if (prev === 0) return 0
+      if (prev === 1) return 1
       return prev - 1
     })
   }
