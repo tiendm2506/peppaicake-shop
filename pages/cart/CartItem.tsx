@@ -14,7 +14,7 @@ interface CartItemProps {
 export default function CartItem(props: CartItemProps) {
   const { cart, index, callBack } = props
   const [amount, setAmount] = useState(cart?.quantity)
-  callBack(index, amount)
+  // callBack(index, amount)
   const handleIncrease = () => {
     console.log('handleIncrease')
     setAmount((prev) => {
@@ -33,7 +33,7 @@ export default function CartItem(props: CartItemProps) {
       <div className={styles.productName}>
         <img className='img-fluid' src={cart?.img} alt={cart?.name} />
         <span>{cart?.name}</span>
-        <Link href='#'>test</Link>
+        <Link href='#'></Link>
       </div>
       <div className={styles.productPrice}>{cart?.price}$</div>
       <div className={styles.productQuantity}>
