@@ -38,13 +38,13 @@ export default function CartItem(props: CartItemProps) {
       <div className={styles.productPrice}>{cart?.price}$</div>
       <div className={styles.productQuantity}>
         <div className={styles.wrapper}>
-          <div className={styles.downAmount} onClick={() => handleDecrease()}>
+          {/* <div className={styles.downAmount} onClick={() => handleDecrease()}>
             -
-          </div>
+          </div> */}
           <div className={styles.amount}>{amount}</div>
-          <div className={styles.upAmount} onClick={() => handleIncrease()}>
+          {/* <div className={styles.upAmount} onClick={() => handleIncrease()}>
             +
-          </div>
+          </div> */}
         </div>
       </div>
       <div className={styles.productTotal}>{cart?.price * amount}$</div>
