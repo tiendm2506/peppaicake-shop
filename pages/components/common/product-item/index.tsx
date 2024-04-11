@@ -1,11 +1,14 @@
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import styles from './styles.module.scss'
 import { ROUTES } from '@/constants'
 import { Product } from '@/models'
 // import { addCart } from '@/store/cartSlice'
-import { useAppSelector } from '@/store'
+import { RootState } from '@/store'
+import { selectListCarts } from '@/store/cartSlice'
+import { useAppSelector, useAppDispatch } from '@/store'
+import { cartAction } from '@/store/cartSlice'
 
 interface ProductProps {
   type?: string
@@ -19,11 +22,14 @@ export default function ProductItem(props: ProductProps) {
   const [disabled, setDisabled] = useState(false)
 
   const listCarts = useAppSelector((state) => state.carts.carts)
-  // console.log('carts: ', listCarts)
+  const carts = useAppSelector(selectListCarts)
+  console.log('carts: ', carts)
+  const dispatch = useAppDispatch()
   const handleAddToCart = () => {
     if (disabled) return
+    console.log('product 111: ', product)
+    dispatch(cartAction.addCarts(product))
     setDisabled(true)
-    // addCart({ name: '8888', amout: 2 })
   }
   return (
     <div className={`${styles.wrapper_product} ${type === LIST_TYPE ? styles.list_type : ''}`}>
